@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static(__dirname + '/app/src/'));
-var server = app.listen(80, function(){
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var dir = process.env.OPENSHIFT_DATA_DIR || __dirname;
+
+app.use(express.static(dir + '/app/src/'));
+var server = app.listen(port, function(){
 
 
 	var host = server.address().address;
