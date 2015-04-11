@@ -141,7 +141,9 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('build-css', function() {
+gulp.task('build', ['build-css'], function(){});
+
+gulp.task('build-css', ['build-js'], function() {
   return gulp.src(input.scss)
     .pipe(sourcemaps.init())  // Process the original sources
       .pipe(sass())
@@ -158,7 +160,7 @@ gulp.task('build-css', function() {
 
 //gutil.env.type === 'production' ?  : gutil.noop()
 
-gulp.task('build-js', function() {
+gulp.task('build-js', ['jshint','build-html'], function() {
 	return gulp.src(input.js)
   	.pipe(sourcemaps.init())
     	.pipe(concat('bundle.js'))
@@ -172,7 +174,7 @@ gulp.task('build-js', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('build-html', function () {
+gulp.task('build-html', ['plugin'], function () {
     var assets = useref.assets();
 
     return gulp.src(input.html)
@@ -199,7 +201,7 @@ gulp.task('connect-build', function () {
   });
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['build'], function() {
   gulp.watch(input.js, ['jshint','build-js']);
   gulp.watch(input.scss, ['build-css']);
   gulp.watch(input.html, ['build-html']);

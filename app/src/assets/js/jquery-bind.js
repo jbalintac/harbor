@@ -5,7 +5,11 @@
     		menu: '#navbar',
 			navigation: true,
 			navigationPosition: 'right',
-			navigationTooltips: ['Home', 'Services', /*'About Us',*/ 'Portfolio','Contact Us']
+			navigationTooltips: ['Home', 'Services', /*'About Us',*/ 'Portfolio','Contact Us'],
+			afterRender: function(){
+
+				$('#main').toggle();
+			}
 	    });
 	});
 })();

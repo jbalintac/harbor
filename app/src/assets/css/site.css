@@ -8,7 +8,7 @@
     margin-right: -0.25em;
     /* Adjusts for spacing */ }
 
-.center, .navbar-transparent .navbar-inner {
+div.center, .navbar-transparent div.navbar-inner {
   display: inline-block;
   vertical-align: middle;
   width: 99%;
@@ -191,4 +191,10 @@
   height: 55%;
   text-align: right;
   overflow: hidden; }
+
+.center-header {
+  padding-bottom: 25px; }
+
+.btn-fullwidth {
+  width: 100%; }
 

@@ -10,7 +10,7 @@
   }
 }
 
-  .center {
+  div.center {
     display: inline-block;
     vertical-align: middle;
     width: 99%;
@@ -301,4 +301,12 @@ $link_border_bottom_color-active: darken($link_border_bottom_color, 30%);/*  lig
   height: 55%;
   text-align: right;
   overflow: hidden;
+}
+
+.center-header{
+  padding-bottom: 25px;
+}
+
+.btn-fullwidth {
+  width: 100%;
 }
