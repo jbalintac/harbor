@@ -16,8 +16,8 @@
 var express = require('express')
 var app = express();
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/app/src'))
+app.set('port', (process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 5000))
+app.use(express.static((process.env.OPENSHIFT_DATA_DIR || __dirname) + '/app/src'))
 
 app.get('/', function(request, response) {
   response.send('Hello World!')
