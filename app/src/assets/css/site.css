@@ -8,12 +8,13 @@
     margin-right: -0.25em;
     /* Adjusts for spacing */ }
 
-div.center, .navbar-transparent div.navbar-inner {
+.center, .navbar-transparent .navbar-inner {
   display: inline-block;
   vertical-align: middle;
   width: 99%;
   max-width: 1140px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  padding-left: 20px; }
 
 .navbar {
   text-align: center; }
@@ -65,7 +66,8 @@ div.center, .navbar-transparent div.navbar-inner {
         border-bottom: #E7E7E7 solid 2px;
         padding-bottom: 4px; }
     .navbar-transparent .navbar-nav > li > a:focus {
-      background-color: transparent; }
+      background-color: transparent;
+      outline: 0; }
   .navbar-transparent .navbar-nav > li.navbar-icon > a:hover {
     border-bottom: none; }
   .navbar-transparent .navbar-nav > .active > a, .navbar-transparent .navbar-nav > .active > a:hover {
@@ -109,44 +111,92 @@ div.center, .navbar-transparent div.navbar-inner {
 
 /* Banner */
 .home {
-  background-color: transparent; }
-  .home .banner .header {
+  /* .banner {
+    max-width: 1140px;
     position: absolute;
-    top: 14%;
+    top: 10%;
     text-align: left;
-    padding-left: 30px; }
-    .home .banner .header .header-main {
-      width: 70%; }
-    .home .banner .header .header-sub {
-      /*margin-top: 20px;*/
-      width: 45%; }
-  .home .banner .screenie-big {
+  }
+
+  .screenie-big {
+
+    max-width: 1140px;
+    z-index: -100;
     position: absolute;
     top: 30%;
-    z-index: -100;
-    right: 10%;
-    max-width: 500px;
     height: 70%;
+    text-align: right;
     overflow: hidden;
-    text-align: right; }
-    .home .banner .screenie-big img {
-      width: 500px;
-      clip: rect(0px, 60px, 200px, 0px);
-      /*transform: rotate(-10deg);*/ }
-  .home .banner .screenie-small {
+  }
+
+  @media (max-width: 991px) {
+    .screenie-big {
+      top: 65%;
+      height: 35%;
+    }
+  }
+
+
+  .screenie-small {
+
+    max-width: 1140px;
+    z-index: -110;
     position: absolute;
     top: 45%;
-    z-index: -110;
-    right: 40%;
-    max-width: 400px;
     height: 55%;
+    text-align: right;
     overflow: hidden;
-    text-align: right; }
-    .home .banner .screenie-small img {
-      width: 400px;
-      clip: rect(0px, 60px, 200px, 0px);
-      opacity: 0.9;
-      /*transform: rotate(-10deg);*/ }
+  }*/
+  /*    .header {
+      position: absolute;
+      top: 14%;
+      text-align: left;
+      padding-left:30px; 
+
+      .header-main {
+
+        width: 70%;
+      }
+
+      .header-sub{
+        /*margin-top: 20px;/
+        width: 45%;
+      }
+    }*/
+  /*.screenie-big {
+
+      position: absolute;
+      top: 30%;
+      z-index: -100;
+      right: 10%;
+      max-width: 500px; 
+      height: 70%; 
+      overflow: hidden;
+      text-align: right;
+      img {
+          width: 500px;
+          clip: rect(0px,60px,200px,0px);
+          /*transform: rotate(-10deg);/
+      }
+    }
+
+     .screenie-small {
+
+      position: absolute;
+      top: 45%;
+      z-index: -110;
+      right: 40%;
+      max-width: 400px; 
+      height: 55%; 
+      overflow: hidden;
+      text-align: right;
+      img {
+          width: 400px;
+          clip: rect(0px,60px,200px,0px);
+          opacity: 0.9;
+          /*transform: rotate(-10deg);/
+      }*/
+  background-color: transparent; }
   .home .fp-tableCell {
     /*    vertical-align: top;
     height: 100%;*/ }
@@ -163,11 +213,23 @@ div.center, .navbar-transparent div.navbar-inner {
 .contact {
   background-color: transparent; }
 
+.btn-fullwidth {
+  width: 100%; }
+
+.center-header {
+  padding-bottom: 25px; }
+
+/* fullPage.js */
+#fp-nav.right {
+  /*right: 5px !important;*/ }
+
 .bannerx {
   max-width: 1140px;
   position: absolute;
   top: 15%;
-  text-align: left; }
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .screeniex-big {
   max-width: 1140px;
@@ -175,13 +237,18 @@ div.center, .navbar-transparent div.navbar-inner {
   position: absolute;
   top: 30%;
   height: 70%;
+  width: 100%;
   text-align: right;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 @media (max-width: 991px) {
   .screeniex-big {
     top: 65%;
-    height: 35%; } }
+    height: 35%; }
+  .screenie img {
+    width: 100%; } }
 
 .screeniex-small {
   max-width: 1140px;
@@ -189,12 +256,8 @@ div.center, .navbar-transparent div.navbar-inner {
   position: absolute;
   top: 45%;
   height: 55%;
+  width: 100%;
   text-align: right;
-  overflow: hidden; }
-
-.center-header {
-  padding-bottom: 25px; }
-
-.btn-fullwidth {
-  width: 100%; }
-
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px; }

@@ -21,7 +21,8 @@
     "modernizr": "~2.8.3",
     "responsejs": "~0.9.1",
     "html5shiv": "~3.7.2",
-    "fullpage.js": "~2.6.3"
+    "fullpage.js": "~2.6.3",
+    "holderjs": "~2.6.0"
   },
   "overrides": {
     "jquery.onepage-scroll": {
