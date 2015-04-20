@@ -1,3 +1,7 @@
+/*others*/
+#border-top {
+  border-top: 4px solid #24313f; }
+
 .center-container {
   text-align: center; }
   .center-container:before {
@@ -7,6 +11,10 @@
     vertical-align: middle;
     margin-right: -0.25em;
     /* Adjusts for spacing */ }
+
+.container-fluid {
+  padding-left: 30px !important;
+  padding-right: 30px !important; }
 
 .center, .navbar-transparent .navbar-inner {
   display: inline-block;
@@ -18,6 +26,9 @@
 
 .navbar {
   text-align: center; }
+
+.navbar-transparent .navbar-inner {
+  padding: 0; }
 
 /* navbar */
 .navbar-transparent {
@@ -39,11 +50,14 @@
 
 /* title */
 .navbar-transparent .navbar-brand {
-  color: #1BBB9C; }
+  color: #1BBB9C;
+  margin-top: 10px;
+  margin-right: 14px; }
 
 .navbar-transparent .navbar-brand:hover, .navbar-transparent .navbar-brand:focus {
   color: #158e77; }
 
+/*fonts*/
 /* link */
 /*#f8f8f8;*/
 /*#f8f8f8;*/
@@ -51,16 +65,23 @@
 /* #e5e5e5;*/
 /*  lighten($link_border_bottom_color, 10%);*/
 .navbar-transparent .navbar-nav {
+  margin-top: 20px;
   /* remove icon hover*/ }
   .navbar-transparent .navbar-nav > li {
     /* link base */
     /* link hover */
     /* remove bs focus */ }
     .navbar-transparent .navbar-nav > li > a {
-      color: #777;
-      background-color: transparent; }
+      color: #82868c;
+      background-color: transparent;
+      font-family: "Tahoma";
+      font-size: 14px;
+      margin-left: 50px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-left: 16px; }
     .navbar-transparent .navbar-nav > li > a:hover {
-      color: #2a2a2a;
+      color: #383a3d;
       background-color: transparent; }
       .navbar-transparent .navbar-nav > li > a:hover > .navbar-underline {
         border-bottom: #E7E7E7 solid 2px;
@@ -71,7 +92,7 @@
   .navbar-transparent .navbar-nav > li.navbar-icon > a:hover {
     border-bottom: none; }
   .navbar-transparent .navbar-nav > .active > a, .navbar-transparent .navbar-nav > .active > a:hover {
-    color: #555;
+    color: #1abc9c;
     background-color: transparent; }
     .navbar-transparent .navbar-nav > .active > a > .navbar-underline, .navbar-transparent .navbar-nav > .active > a:hover > .navbar-underline {
       border-bottom: #9b9b9b solid 2px;

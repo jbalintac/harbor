@@ -1,6 +1,10 @@
+/*others*/
+#border-top{
+   border-top: 4px solid #24313f;
+}
+
 .center-container {
   text-align: center;
-
   &:before {
     content: '';
     display: inline-block;
@@ -8,6 +12,10 @@
     vertical-align: middle;
     margin-right: -0.25em; /* Adjusts for spacing */
   }
+}
+.container-fluid{
+  padding-left:30px !important ;
+  padding-right: 30px !important;
 }
 
 .center {
@@ -26,8 +34,9 @@
 .navbar-transparent {
 
   .navbar-inner {
-   
+  
     @extend .center;
+    padding: 0;
   }
 }
 
@@ -57,29 +66,39 @@ $logo_color-hover: darken($logo_color, 10%);
 
 .navbar-transparent .navbar-brand {
     color: $logo_color;
+    margin-top:10px;
+    margin-right: 14px;
 }
 .navbar-transparent .navbar-brand:hover,
 .navbar-transparent .navbar-brand:focus {
     color: $logo_color-hover;
 }
 
+/*fonts*/
+
 /* link */
 
-$link_color: #777; /*#f8f8f8;*/
+$link_color: #82868c; /*#f8f8f8;*/
 $link_color-hover: darken($link_color, 30%); /*#f8f8f8;*/
-$link_color-active:  #555; /*#f8f8f8;*/
+$link_color-active:  #1abc9c; /*#f8f8f8;*/
 
 $link_border_bottom_color: #E7E7E7; /* #e5e5e5;*/
 $link_border_bottom_color-active: darken($link_border_bottom_color, 30%);/*  lighten($link_border_bottom_color, 10%);*/ 
 
 .navbar-transparent .navbar-nav {
-
+  margin-top: 20px;
   > li {
 
     /* link base */
     > a {
         color: $link_color;
         background-color: transparent;
+        font-family: "Tahoma";
+        font-size:14px;
+        margin-left: 50px;
+        line-height: 40px;
+        text-transform: uppercase;
+        margin-left: 16px;
     }
 
     /* link hover */
@@ -110,7 +129,8 @@ $link_border_bottom_color-active: darken($link_border_bottom_color, 30%);/*  lig
   }
 
   > .active {
-
+    
+    
     > a, > a:hover {
       color: $link_color-active;
       background-color: transparent;
