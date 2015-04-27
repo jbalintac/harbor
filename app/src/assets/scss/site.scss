@@ -6,6 +6,8 @@
 h1,h2,h3,a,p{
   font-family: "Tahoma";
 }
+.mdtop60{margin-top: 60px;}
+.mdtop130{margin-top: 130px;}
 .container{
   /*background-color: #ccc;*/
   padding: 0;
@@ -128,3 +130,28 @@ ul.nav.navbar-nav.navbar-right{
     }
   }
 }
+
+/*portfolio*/
+#portfolio{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  h1{
+    font-size: 60px;
+    color: #727474;
+    text-align: right;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  h2{ 
+  font-size: 32px;
+  color: #30c3a6;
+  padding-top: 88px;
+  font-weight: bold;
+  }
+}
+
+/*override*/
+.cbp-so-side{width: 100% !important;padding:0 !important;min-height: 0 !important;}
+.cbp-so-side-left{text-align: left !important;}
+.cbp-so-side-right{text-align: right !important;}
+.cbp-so-scroller{margin-top: 0 !important;}
