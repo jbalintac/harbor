@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 5000;
-var dir = process.env.OPENSHIFT_DATA_DIR || __dirname + '/app/build';
+var dir = process.env.OPENSHIFT_DATA_DIR || __dirname + '/app/src';
 
 app.use(express.static(dir));
 
